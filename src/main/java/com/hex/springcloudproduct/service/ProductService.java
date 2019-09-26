@@ -1,6 +1,7 @@
 package com.hex.springcloudproduct.service;
 
 import com.hex.springcloudproduct.dataobject.ProductInfo;
+import com.hex.springcloudproduct.dto.CartDTO;
 
 import java.util.List;
 
@@ -22,5 +23,12 @@ public interface ProductService {
      * @return
      */
     List<ProductInfo> findList(List<String> productIdList);
+
+    /**
+     * 扣库存
+     *
+     * @param cartDTOList
+     */
+    void decreaseStock(List<CartDTO> cartDTOList);
 
 }

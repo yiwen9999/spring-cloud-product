@@ -2,6 +2,7 @@ package com.hex.springcloudproduct.controller;
 
 import com.hex.springcloudproduct.dataobject.ProductCategory;
 import com.hex.springcloudproduct.dataobject.ProductInfo;
+import com.hex.springcloudproduct.dto.CartDTO;
 import com.hex.springcloudproduct.service.CategoryService;
 import com.hex.springcloudproduct.service.ProductService;
 import com.hex.springcloudproduct.utils.ResultVOUtil;
@@ -81,5 +82,10 @@ public class ProductController {
     @PostMapping("/listForOrder")
     public List<ProductInfo> listForOrder(@RequestBody List<String> productIdList) {
         return productService.findList(productIdList);
+    }
+
+    @PostMapping("/decreaseStock")
+    public void decreaseStock(@RequestBody List<CartDTO> cartDTOList) {
+        productService.decreaseStock(cartDTOList);
     }
 }
