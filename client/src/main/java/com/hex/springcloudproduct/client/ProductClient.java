@@ -17,9 +17,9 @@ import java.util.List;
 public interface ProductClient {
 
     @PostMapping("/product/listForOrder")
-    public List<ProductInfoOutPut> listForOrder(@RequestBody List<String> productIdList);
+    List<ProductInfoOutPut> listForOrder(@RequestBody List<String> productIdList);
 
     @PostMapping("/product/decreaseStock")
-    public void decreaseStock(@RequestBody List<DecreaseStockInput> decreaseStockInputList);
+    void decreaseStock(@RequestBody List<DecreaseStockInput> decreaseStockInputList);
 
 }

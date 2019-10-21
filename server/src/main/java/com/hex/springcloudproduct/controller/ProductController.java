@@ -85,6 +85,11 @@ public class ProductController {
         return productService.findList(productIdList);
     }
 
+    /**
+     * 扣库存
+     *
+     * @param decreaseStockInputList
+     */
     @PostMapping("/decreaseStock")
     public void decreaseStock(@RequestBody List<DecreaseStockInput> decreaseStockInputList) {
         productService.decreaseStock(decreaseStockInputList);
