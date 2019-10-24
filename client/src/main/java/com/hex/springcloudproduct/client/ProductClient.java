@@ -2,7 +2,8 @@ package com.hex.springcloudproduct.client;
 
 import com.hex.springcloudproduct.common.DecreaseStockInput;
 import com.hex.springcloudproduct.common.ProductInfoOutPut;
-import org.springframework.cloud.netflix.feign.FeignClient;
+//import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
